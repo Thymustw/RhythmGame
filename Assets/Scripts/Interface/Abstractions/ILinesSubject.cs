@@ -7,8 +7,8 @@ namespace RhythmGame.Interfaces
         public void RegisterLine(ILine line);
 
         public void RemoveLine(ILine line);
-        //public Line NotifyListeners(int index);
+
         public void NotifyListeners();
-        public Line NotifyListeners(Vector3 hitPoint, float width, int touchId, bool touchCountChanged);
+        public void NotifyListeners(int touchId, TouchPhase touchPhase, Vector3 hitPoint);
     }
 }

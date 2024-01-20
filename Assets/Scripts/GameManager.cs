@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     public float speed;
     bool isEnterGameScene;
+    public Text textTouchCount;
     //public int screenScaleWidth;
 
     protected override void Awake()
@@ -21,6 +22,14 @@ public class GameManager : Singleton<GameManager>
 
     void Update()
     {
+        // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // RaycastHit hit;
+        // LayerMask layerMask = LayerMask.GetMask("Default");
+        
+        // if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore))
+        // {
+        //     textTouchCount.text = hit.collider.name;
+        // }
         // Touch touch = Input.GetTouch(0);
 
         // Vector3 screenPosDepth = touch.position;

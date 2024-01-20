@@ -39,7 +39,7 @@ public class InputDebugger : MonoBehaviour, ILinesSubject
         }
 
         // setLineDown = true;
-        textTouchCount.text = Screen.width.ToString();
+        // textTouchCount.text = Screen.width.ToString();
         // Debug.Log(Screen.width);
     }
     
@@ -54,31 +54,37 @@ public class InputDebugger : MonoBehaviour, ILinesSubject
         lineObserver.Remove(line);
     }
 
-    // public Line NotifyListeners(int index)
-    // {
-    //     Line correctLine = null;
-    //     foreach (Line line in lineObserver)
-    //         if(line.gameObject.name.EndsWith(index.ToString()))
-    //         {
-    //             correctLine = line;
-    //             break;
-    //         }
-    //     return correctLine;
-    // }
-
     public void NotifyListeners()
     {
-        foreach (Line line in lineObserver)
-            line.OnLeaveLine();
+        //foreach (Line line in lineObserver)
+            //line.OnLeaveLine();
     }
 
-    public Line NotifyListeners(Vector3 hitPoint, float width, int touchId, bool touchCountChanged)
+    public void NotifyListeners(int Id, TouchPhase phase, Vector3 point)
     {
-        Line correctLine = null;
-
         foreach (Line line in lineObserver)
-            line.LineStatus(hitPoint, width, touchId, touchCountChanged);
-        return correctLine;
+        {
+            if(phase == TouchPhase.Ended)
+            {
+                line.SetIsTouchDict(Id, false);
+            }
+            else if(phase == TouchPhase.Began || phase == TouchPhase.Stationary || phase == TouchPhase.Moved)
+            {
+                float leftEdge = line.transform.position.x - (16 / 6f / 2);
+                float rightEdge = line.transform.position.x + (16 / 6f / 2);
+
+                if(point.x >= leftEdge && point.x <= rightEdge)
+                {
+                    line.SetIsTouchDict(Id, true);
+                }
+                else if(point.x <= leftEdge || point.x >= rightEdge)
+                {
+                    line.SetIsTouchDict(Id, false);
+                }
+            }
+
+            line.SetTouchStatusDict(Id, phase);
+        }
     }
     #endregion
 
@@ -160,33 +166,29 @@ public class InputDebugger : MonoBehaviour, ILinesSubject
         //     NotifyListeners(6)?.OnLeave();
         #endregion
 
-        // textTouchCount.text = Input.touchCount.ToString();
+        // textTouchCount.text = "";
 
-        if (Input.touchCount > 0)
+        // if (Input.touchCount > 0)
+        // {
+        //     foreach(Touch touch in Input.touches)
+        //     {
+        //         textTouchCount.text += touch.fingerId.ToString() + ": " + touch.phase.ToString() + ", ";
+        //     }
+        // }
+
+        TouchStateCheck();
+    }
+
+    void TouchStateCheck()
+    {
+        foreach(Touch touch in Input.touches)
         {
-            if(lastTouchCount != Input.touchCount)
+            Ray ray = Camera.main.ScreenPointToRay(touch.position);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit, LayerMask.GetMask("Line")))
             {
-                lastTouchCount = Input.touchCount;
-                isTouchCountChanged = true;
-            }
-            else
-            {
-                isTouchCountChanged = false;
-            }
-
-            
-            foreach(Touch touch in Input.touches)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(touch.position);
-                RaycastHit hit;
-
-                if(Physics.Raycast(ray, out hit))
-                {
-                    NotifyListeners(hit.point, transform.localScale.x / transform.childCount, touch.fingerId, isTouchCountChanged);
-                }
+                NotifyListeners(touch.fingerId, touch.phase, hit.point);
             }
         }
-        else
-            NotifyListeners();
     }
 }
