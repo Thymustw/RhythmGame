@@ -3,7 +3,7 @@ using RhythmGame.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InputDebugger : MonoBehaviour, ILinesSubject
+public class Field : MonoBehaviour, ILinesSubject
 {
     List<ILine> lineObserver;
     int lastTouchCount = 0;
@@ -12,7 +12,7 @@ public class InputDebugger : MonoBehaviour, ILinesSubject
 
     public Text textTouchCount;
 
-    public InputDebugger()
+    public Field()
     {
         lineObserver = new List<ILine>();
     }
@@ -21,7 +21,7 @@ public class InputDebugger : MonoBehaviour, ILinesSubject
     {
         //Debug.Log(GameManager.Instance.screenScaleWidth);
         // Screen.height / 9 * 16 / 120 == 16:9's width;
-        transform.localScale = new Vector3(Screen.height / 9 * 16 / 120, 80, 1);
+        transform.localScale = new Vector3(Screen.height / 9 * 16 / 120, transform.localScale.y, 1);
         Transform LinesObj = transform.GetChild(0);
 
         float lineWidth = 1f / LinesObj.childCount;
@@ -56,8 +56,8 @@ public class InputDebugger : MonoBehaviour, ILinesSubject
 
     public void NotifyListeners()
     {
-        //foreach (Line line in lineObserver)
-            //line.OnLeaveLine();
+        foreach (Line line in lineObserver)
+            line.OnExitLine();
     }
 
     public void NotifyListeners(int Id, TouchPhase phase, Vector3 point)

@@ -17,11 +17,14 @@ public class GameManager : Singleton<GameManager>
         //GameObject.Find("Field").SetActive(true);
 
         DontDestroyOnLoad(this.gameObject);
-        isEnterGameScene = true;
+        //JsonReader.Instance.PrintAll();
+        //isEnterGameScene = true;
     }
 
     void Update()
     {
+
+        //Debug.Log(isEnterGameScene);
         // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         // RaycastHit hit;
         // LayerMask layerMask = LayerMask.GetMask("Default");
@@ -63,6 +66,7 @@ public class GameManager : Singleton<GameManager>
         // }
     }
 
+    // For Testing.
     public bool GetIsEnterGameScene() { return isEnterGameScene; }
     public void SetIsEnterGameScene(bool value) { isEnterGameScene = value; }
 }

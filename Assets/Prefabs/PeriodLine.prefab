@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5509855389565525882}
   - component: {fileID: 5509855389565525883}
-  - component: {fileID: -1020220714030022067}
+  - component: {fileID: 6509365024693264942}
   m_Layer: 0
   m_Name: PeriodLine
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1020220714030022067
+--- !u!114 &6509365024693264942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

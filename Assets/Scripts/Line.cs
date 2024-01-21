@@ -8,7 +8,7 @@ public class Line : MonoBehaviour , ILine
 {
     SpriteRenderer spriteRenderer;
     Color lineColor;
-    InputDebugger inputDebugger;
+    Field field;
     public Text textTouchCount;
     
     Dictionary<int, TouchPhase> touchStatusDict = new Dictionary<int, TouchPhase>();
@@ -17,17 +17,17 @@ public class Line : MonoBehaviour , ILine
 
     void Awake()
     {
-        inputDebugger = transform.parent.parent.GetComponent<InputDebugger>();
+        field = transform.parent.parent.GetComponent<Field>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         lineColor = spriteRenderer.color;
             
-        spriteRenderer.color = new Color(lineColor.r, lineColor.g, lineColor.b, 0.2f);
+        spriteRenderer.color = new Color(lineColor.r, lineColor.g, lineColor.b, 0f);
     }
 
     void Start()
     {
-        inputDebugger.RegisterLine(this);
+        field.RegisterLine(this);
     }
 
     void LateUpdate()
@@ -70,13 +70,13 @@ public class Line : MonoBehaviour , ILine
 
     public void OnEnterLine()
     {
-        spriteRenderer.color = new Color(lineColor.r, lineColor.g, lineColor.b, 0.5f);
+        spriteRenderer.color = new Color(lineColor.r, lineColor.g, lineColor.b, 0.05f);
         // stillOnIt = true;
     }
 
     public void OnExitLine()
     {
-        spriteRenderer.color = new Color(lineColor.r, lineColor.g, lineColor.b, 0.2f);
+        spriteRenderer.color = new Color(lineColor.r, lineColor.g, lineColor.b, 0f);
         // stillOnIt = false;
         //lastTouchId = -1;
     }
