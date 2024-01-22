@@ -17,8 +17,8 @@ public class Object
     public string type;
     //public List<Change>? changes;
     public bool critical;
-    public double lane;
-    public double size;
+    public float lane;
+    public float size;
     public int timeScaleGroup;
     public bool trace;
     public int time;

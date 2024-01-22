@@ -1575,7 +1575,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   periodLine: {fileID: 5509855389565525881, guid: 25c6c5b1ac36a204c9b197b2a107675e, type: 3}
+  single: {fileID: 1477142045712920390, guid: 5b0e5dc8f128e5448a777c8eb3eee5db, type: 3}
   textBPM: {fileID: 305967633}
+  button: {fileID: 113933507}
 --- !u!1 &639327554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,14 +2605,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.46174863, y: 0, z: 0, w: 0.8870109}
+  m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1596473618}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -55, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
 --- !u!1 &970492842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,7 +4265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf5ccbf13b35d749bdea23846499ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9.8
+  speed: 3
   textTouchCount: {fileID: 266871268}
 --- !u!1 &1770651575
 GameObject:

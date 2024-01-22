@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RhythmGame.Notes
 {
-    public class PeriodLineNote : MonoBehaviour, INote
+    public class NormalNote : MonoBehaviour, INote
     {
         GameObject noteDeletor;
         IEnumerator enumerator;
@@ -44,7 +44,7 @@ namespace RhythmGame.Notes
                 yield return null;
             }
         }
-        
+            
         void OnDestory()
         {
             StopCoroutine(enumerator);

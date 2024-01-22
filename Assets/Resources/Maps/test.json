@@ -1,32 +1,57 @@
 {
     "objects": [
         {
-        	"beat": 4.0,
-        	"bpm": 60.0,
+            "beat": 0.0,
+            "bpm": 120.0,
             "time": 4,
             "meter": 4,
-        	"type": "bpm"
+            "type": "bpm"
         },
         {
-        	"beat": 0.0,
-        	"bpm": 97.0,
+            "beat": 4.0,
+            "bpm": 120.0,
             "time": 6,
             "meter": 8,
-        	"type": "bpm"
+            "type": "bpm"
         },
         {
-            "beat": 3.0,
+            "beat": 7.0,
+            "bpm": 120.0,
+            "time": 4,
+            "meter": 4,
+            "type": "bpm"
+        },
+        {
+            "beat": 0.0,
             "critical": false,
-            "lane": 0.0,
-            "size": 6.0,
+            "lane": -4.5,
+            "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
             "type": "single"
         },
         {
-            "beat": 3.5,
+            "beat": 1.0,
             "critical": false,
-            "lane": 4.5,
+            "lane": -4.5,
+            "size": 1.5,
+            "timeScaleGroup": 0,
+            "trace": false,
+            "type": "single"
+        },
+        {
+            "beat": 2.0,
+            "critical": false,
+            "lane": -4.5,
+            "size": 1.5,
+            "timeScaleGroup": 0,
+            "trace": false,
+            "type": "single"
+        },
+        {
+            "beat": 3.0,
+            "critical": false,
+            "lane": -4.5,
             "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
@@ -35,8 +60,8 @@
         {
             "beat": 4.0,
             "critical": false,
-            "lane": 0.0,
-            "size": 6.0,
+            "lane": -4.5,
+            "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
             "type": "single"
@@ -44,7 +69,7 @@
         {
             "beat": 4.5,
             "critical": false,
-            "lane": -1.5,
+            "lane": -4.5,
             "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
@@ -53,8 +78,8 @@
         {
             "beat": 5.0,
             "critical": false,
-            "lane": 0.0,
-            "size": 6.0,
+            "lane": -4.5,
+            "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
             "type": "single"
@@ -62,7 +87,7 @@
         {
             "beat": 5.5,
             "critical": false,
-            "lane": 1.5,
+            "lane": -4.5,
             "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
@@ -71,16 +96,7 @@
         {
             "beat": 6.0,
             "critical": false,
-            "lane": 0.0,
-            "size": 3.0,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 6.5,
-            "critical": false,
-            "lane": 4.5,
+            "lane": -4.5,
             "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
@@ -96,27 +112,9 @@
             "type": "single"
         },
         {
-            "beat": 6.75,
+            "beat": 7.0,
             "critical": false,
-            "lane": 0.0,
-            "size": 3.0,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 7.5,
-            "critical": false,
-            "lane": 0.0,
-            "size": 2.0,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 7.5,
-            "critical": false,
-            "lane": 4.5,
+            "lane": -4.5,
             "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
@@ -132,72 +130,9 @@
             "type": "single"
         },
         {
-            "beat": 8.5,
-            "critical": false,
-            "lane": -4.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 8.5,
-            "critical": false,
-            "lane": -1.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
             "beat": 9.0,
             "critical": false,
             "lane": -4.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 9.0,
-            "critical": false,
-            "lane": -1.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 9.0,
-            "critical": false,
-            "lane": 1.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 9.5,
-            "critical": false,
-            "lane": -4.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 9.5,
-            "critical": false,
-            "lane": 1.5,
-            "size": 1.5,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 9.5,
-            "critical": false,
-            "lane": 4.5,
             "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
@@ -206,17 +141,8 @@
         {
             "beat": 10.0,
             "critical": false,
-            "lane": -3.0,
-            "size": 3.0,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 10.5,
-            "critical": false,
-            "lane": 0.0,
-            "size": 2.0,
+            "lane": -4.5,
+            "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
             "type": "single"
@@ -224,26 +150,8 @@
         {
             "beat": 11.0,
             "critical": false,
-            "lane": -3.0,
-            "size": 3.0,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 11.5,
-            "critical": false,
-            "lane": 0.0,
-            "size": 2.0,
-            "timeScaleGroup": 0,
-            "trace": false,
-            "type": "single"
-        },
-        {
-            "beat": 12.0,
-            "critical": false,
-            "lane": 3.0,
-            "size": 3.0,
+            "lane": -4.5,
+            "size": 1.5,
             "timeScaleGroup": 0,
             "trace": false,
             "type": "single"
