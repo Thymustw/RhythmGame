@@ -68,7 +68,7 @@ public class NoteGenerator : MonoBehaviour
         // if(Input.GetKeyDown(KeyCode.Space))
         if(GameManager.Instance.GetIsEnterGameScene())
         {
-            //StartCoroutine(BPMLine());
+            StartCoroutine(BPMLine());
             StartCoroutine(Single());
             GameManager.Instance.SetIsEnterGameScene(false);
         }
@@ -77,8 +77,8 @@ public class NoteGenerator : MonoBehaviour
     public IEnumerator BPMLine()
     {
         float beat, generateTime, currentBeat, loopMaxBeat;
-        beat = 4f / BPMs[0].Meter * BPMs[0].Time;
-        generateTime = 60f / BPMs[0].Tempo * beat;
+        // beat = 4f / BPMs[0].Meter * BPMs[0].Time;
+        // generateTime = 60f / BPMs[0].Tempo * beat;
 
         // GameObject tempFirstNote = Instantiate(periodLine, transform);
         // yield return new WaitForSeconds(generateTime);

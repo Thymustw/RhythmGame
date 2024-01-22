@@ -13,18 +13,18 @@ namespace RhythmGame.Notes
         {
             noteDeletor = GameObject.Find("NoteDeletor");
             isEnter = true;
-            enumerator = GenerateNote();
-            StartCoroutine(enumerator);
+            // enumerator = GenerateNote();
+            // StartCoroutine(enumerator);
         }
 
         void FixedUpdate()
         {
-            // if(isEnter)
-            // {
-            //     enumerator = GenerateNote();
-            //     StartCoroutine(enumerator);
-            //     isEnter = false; 
-            // }
+            if(isEnter)
+            {
+                enumerator = GenerateNote();
+                StartCoroutine(enumerator);
+                isEnter = false; 
+            }
         }
 
         public IEnumerator GenerateNote()
